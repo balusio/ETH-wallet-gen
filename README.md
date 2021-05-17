@@ -1,4 +1,4 @@
-# CHOOZE API FOR ETHERUM NETWORK
+# API FOR ETHERUM NETWORK
 a solidity and nodejs smart contract framework
 
 # ENV VARIABLES
