@@ -1,0 +1,24 @@
+{
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "env": {
+    "test": {
+      "plugins": ["@babel/plugin-transform-runtime"]
+    }
+  },
+  "plugins": [
+    ["module-resolver", {
+      "extensions": [".js"],
+      "alias": {
+        "@server": "./src/server",
+        "@routes": "./src/routes",
+        "@middlewares": "./src/middlewares",
+        "@services": "./src/services",
+        "@models": "./src/models",
+        "@controllers": "./src/controllers",
+        "@smartcontracts": "./src/smartcontracts"
+      }
+    }]
+  ]
+}

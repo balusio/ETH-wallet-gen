@@ -1,0 +1,55 @@
+{
+  "name": "blockchain_connector",
+  "version": "0.0.1",
+  "description": "Rent apartment smart contract",
+  "main": "src/server/index.js",
+  "scripts": {
+    "dev": "node_modules/.bin/nodemon --exec node_modules/.bin/babel-node src/server/index.js --delay 1200ms",
+    "build": "node_modules/.bin/babel src --out-dir public --ignore src/**/*.spec.js",
+    "start": "node public/server/index.js",
+    "test": "docker exec -it dev-choozie /bin/bash truffle test",
+    "migrate-contracts": "docker exec -it dev-choozie /bin/bash truffle migrate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:choozie/blockchain-connector.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@shelf/jest-mongodb": "^1.2.1",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-import-resolver-babel-module": "^5.1.2",
+    "eslint-plugin-import": "^2.22.0",
+    "jest": "^26.1.0",
+    "mocha": "^8.1.1",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "@babel/register": "^7.10.5",
+    "@openzeppelin/contracts": "^3.1.0",
+    "@truffle/hdwallet-provider": "^1.0.40",
+    "axios": "^0.19.2",
+    "bcrypt": "^5.0.0",
+    "bip39": "^3.0.2",
+    "chai": "^4.2.0",
+    "ethereumjs-wallet": "^1.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "helmet": "^3.23.3",
+    "keycloak-backend": "^2.0.0",
+    "mongoose": "^5.9.27",
+    "passport": "^0.4.1",
+    "solc": "^0.6.12",
+    "web3": "^1.2.11"
+  }
+}
